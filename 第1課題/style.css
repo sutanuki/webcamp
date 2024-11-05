@@ -47,7 +47,8 @@ section{
 .content{
     background-color: #EEEEEE;
     width: 300px;
-    border: #EEEEEE 5px solid;
+    border: #EEEEEE 10px solid;
+    border-top: #EEEEEE 5px solid;
 }
 .title{
     margin-bottom: 5px;
