@@ -8,10 +8,10 @@ class ListsController < ApplicationController
     list.save
     redirect_to '/top'
   end
-  
+
   def index
   end
-
+  
   def show
   end
 
