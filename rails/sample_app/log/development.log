@@ -13,3 +13,133 @@ Migrating to CreateLists (20241113121645)
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-11-15 15:51:45 +0900
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ayumu0106/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-6.1.7.10/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ayumu0106/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-6.1.7.10/lib/rails/templates/rails/welcome/index.html.erb (Duration: 17.2ms | Allocations: 569)
+Completed 200 OK in 33ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 4549)
+
+
+Started GET "/new" for 127.0.0.1 at 2024-11-15 15:51:51 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/lists/new" for 127.0.0.1 at 2024-11-15 15:52:03 +0900
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 4565)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/ayumu0106/Downloads/environment/rails/sample_app/public/packs
+[Webpacker] Hash: c258ea7298bd1591ae21
+Version: webpack 4.47.0
+Time: 704ms
+Built at: 2024/11/15 15:52:06
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-7f116aa36299a0409550.js    121 KiB  application  [emitted] [immutable]  application
+js/application-7f116aa36299a0409550.js.map    134 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-7f116aa36299a0409550.js js/application-7f116aa36299a0409550.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 493 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2573.4ms | Allocations: 21946)
+Completed 200 OK in 2578ms (Views: 2575.2ms | ActiveRecord: 0.9ms | Allocations: 23157)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2024-11-15 15:54:52 +0900
+Processing by ListsController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/lists_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 729)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4414)
+Completed 200 OK in 24ms (Views: 17.7ms | ActiveRecord: 0.5ms | Allocations: 9086)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2024-11-15 15:54:53 +0900
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3888)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 4255)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2024-11-15 15:54:54 +0900
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3889)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 4258)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2024-11-15 15:54:54 +0900
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3888)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 4248)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2024-11-15 15:54:54 +0900
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3904)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 4266)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2024-11-15 15:54:55 +0900
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4031)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 4408)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2024-11-15 15:54:55 +0900
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 3888)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 4248)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2024-11-15 15:54:55 +0900
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3888)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 4248)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2024-11-15 15:54:55 +0900
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4043)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 4418)
+
+
