@@ -6,15 +6,20 @@ class ListsController < ApplicationController
   def create
     list = List.new(list_params)
     list.save
-    redirect_to '/top'
-  end
-
-  def index
+    redirect_to '/homes/top'
   end
   
+  def index
+    @lists = List.all  
+  end
+
   def show
   end
 
   def edit
+  end
+  private
+  def list_params
+    params.require(:list).permit(:title, :body)
   end
 end
