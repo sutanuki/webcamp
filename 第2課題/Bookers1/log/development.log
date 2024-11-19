@@ -430,3 +430,13 @@ Processing by HomesController#top as HTML
 Completed 200 OK in 24ms (Views: 22.9ms | Allocations: 11422)
 
 
+Started GET "/" for 127.0.0.1 at 2024-11-19 15:06:26 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.8ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 4932)
+Completed 200 OK in 23ms (Views: 17.2ms | Allocations: 6049)
+
+
