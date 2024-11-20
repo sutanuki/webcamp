@@ -440,3 +440,796 @@ Processing by HomesController#top as HTML
 Completed 200 OK in 23ms (Views: 17.2ms | Allocations: 6049)
 
 
+Started GET "/" for 127.0.0.1 at 2024-11-19 15:56:59 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.2ms | Allocations: 949)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 84.7ms | Allocations: 25435)
+Completed 200 OK in 95ms (Views: 87.0ms | ActiveRecord: 0.0ms | Allocations: 28531)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:05:07 +0900
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.6ms | Allocations: 392)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 8998)
+Completed 200 OK in 26ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 12093)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:05:23 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.7ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 5090)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.0ms | Allocations: 6212)
+
+
+Started GET "/root_path" for 127.0.0.1 at 2024-11-19 16:05:25 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/root_path"):
+  
+Started GET "/root_path" for 127.0.0.1 at 2024-11-19 16:06:05 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/root_path"):
+  
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:06:12 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.8ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5106)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 6227)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:06:13 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4754)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 5104)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:06:14 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4768)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 5119)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:06:14 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4753)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 5101)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:06:15 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4753)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 5100)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:06:15 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4754)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 5101)
+
+
+Started GET "/lists" for 127.0.0.1 at 2024-11-19 16:06:39 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/lists"):
+  
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:06:44 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.4ms | Allocations: 225)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 5170)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 6286)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:06:46 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4768)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 5115)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:06:47 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 4768)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 5116)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:08:49 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.0ms | Allocations: 186)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | Allocations: 7589)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms | Allocations: 8705)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:08:55 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.1ms | Allocations: 181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 5150)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 6263)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:08:56 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4798)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 5146)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:08:56 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 4793)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 5140)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:09:08 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 13351)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 13697)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:09:11 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 4800)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 5149)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:09:11 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 4791)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 5138)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:09:23 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 12926)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 13272)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:13:11 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.3ms | Allocations: 186)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 6194)
+Completed 500 Internal Server Error in 19ms (Allocations: 7309)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books"}, missing required keys: [:id]):
+    16:       <ul>
+    17:         <li><%= link_to "新規投稿" , new_book_path %></li>
+    18:         <li><%= link_to "投稿一覧" , books_path %></li>
+    19:         <li><%= link_to "投稿編集" , edit_book_path %></li>
+    20:         <li><%= link_to "投稿削除" , book_path %></li>
+    21:       </ul>
+    22:     </header>
+  
+app/views/layouts/application.html.erb:19
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:13:12 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5689)
+Completed 500 Internal Server Error in 16ms (Allocations: 6015)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books"}, missing required keys: [:id]):
+    16:       <ul>
+    17:         <li><%= link_to "新規投稿" , new_book_path %></li>
+    18:         <li><%= link_to "投稿一覧" , books_path %></li>
+    19:         <li><%= link_to "投稿編集" , edit_book_path %></li>
+    20:         <li><%= link_to "投稿削除" , book_path %></li>
+    21:       </ul>
+    22:     </header>
+  
+app/views/layouts/application.html.erb:19
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:13:36 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 5688)
+Completed 500 Internal Server Error in 22ms (Allocations: 6013)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books"}, missing required keys: [:id]):
+    16:       <ul>
+    17:         <li><%= link_to "新規投稿" , new_book_path %></li>
+    18:         <li><%= link_to "投稿一覧" , books_path %></li>
+    19:         <li><%= link_to "投稿編集" , edit_book_path %></li>
+    20:         <li><%= link_to "投稿削除" , book_path %></li>
+    21:       </ul>
+    22:     </header>
+  
+app/views/layouts/application.html.erb:19
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:14:21 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.7ms | Allocations: 182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 6102)
+Completed 500 Internal Server Error in 23ms (Allocations: 7197)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"books"}, missing required keys: [:id]):
+    16:       <ul>
+    17:         <li><%= link_to "新規投稿" , new_book_path %></li>
+    18:         <li><%= link_to "投稿一覧" , books_path %></li>
+    19:         <li><%= link_to "投稿編集" , book_path %></li>
+    20:         <li><%= link_to "投稿削除" , book_path %></li>
+    21:       </ul>
+    22:     </header>
+  
+app/views/layouts/application.html.erb:19
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:14:22 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 5687)
+Completed 500 Internal Server Error in 18ms (Allocations: 6013)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"books"}, missing required keys: [:id]):
+    16:       <ul>
+    17:         <li><%= link_to "新規投稿" , new_book_path %></li>
+    18:         <li><%= link_to "投稿一覧" , books_path %></li>
+    19:         <li><%= link_to "投稿編集" , book_path %></li>
+    20:         <li><%= link_to "投稿削除" , book_path %></li>
+    21:       </ul>
+    22:     </header>
+  
+app/views/layouts/application.html.erb:19
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:14:38 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.9ms | Allocations: 181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 5316)
+Completed 200 OK in 17ms (Views: 14.3ms | Allocations: 6431)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:14:39 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4899)
+Completed 200 OK in 9ms (Views: 8.5ms | Allocations: 5246)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-19 16:14:41 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 5021)
+Completed 200 OK in 12ms (Views: 10.7ms | Allocations: 5972)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:14:44 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 5004)
+Completed 200 OK in 20ms (Views: 19.2ms | Allocations: 5359)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-19 16:14:46 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4899)
+Completed 200 OK in 15ms (Views: 13.9ms | Allocations: 5246)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-11-19 16:14:46 +0900
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 205)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 5044)
+Completed 200 OK in 14ms (Views: 12.2ms | Allocations: 5538)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-19 16:14:48 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 5018)
+Completed 200 OK in 11ms (Views: 10.4ms | Allocations: 5846)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-19 16:33:12 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 13391)
+Completed 200 OK in 22ms (Views: 19.2ms | Allocations: 15113)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-11-19 16:33:17 +0900
+Processing by BooksController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/books_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1167)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 6010)
+Completed 200 OK in 32ms (Views: 13.9ms | ActiveRecord: 1.9ms | Allocations: 10199)
+
+
+Started GET "/lists" for 127.0.0.1 at 2024-11-20 07:06:42 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/lists"):
+  
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:07:01 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.0ms | Allocations: 187)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5296)
+Completed 200 OK in 17ms (Views: 15.0ms | Allocations: 6482)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:08:40 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.4ms | Allocations: 186)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 13442)
+Completed 200 OK in 39ms (Views: 36.6ms | Allocations: 14558)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:11:55 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.7ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 14295)
+Completed 200 OK in 47ms (Views: 46.0ms | Allocations: 14642)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:13:00 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1113)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1195)
+Completed 500 Internal Server Error in 12ms (Allocations: 2297)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>ようこそ Bookers へ！</h2>
+<p>Bookers では、さまざまな書籍に関するあなたの意見や<br>
+印象を共有し交換することができます</p>
+
+<%= link_to "start" , root_path ,class="start"%>
+):
+1:    <h2>ようこそ Bookers へ！</h2>
+2:    <p>Bookers では、さまざまな書籍に関するあなたの意見や<br>
+3:    印象を共有し交換することができます</p>
+4:    
+5:    <%= link_to "start" , root_path ,class="start"%>
+  
+app/views/homes/top.html.erb:5: syntax error, unexpected '='
+app/views/homes/top.html.erb:5: syntax error, unexpected '='
+app/views/homes/top.html.erb:5: syntax error, unexpected '='
+app/views/homes/top.html.erb:5: syntax error, unexpected '='
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:13:19 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1098)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1180)
+Completed 500 Internal Server Error in 7ms (Allocations: 2277)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>ようこそ Bookers へ！</h2>
+<p>Bookers では、さまざまな書籍に関するあなたの意見や<br>
+印象を共有し交換することができます</p>
+
+<%= link_to "start" , root_path class="start"%>
+):
+1:    <h2>ようこそ Bookers へ！</h2>
+2:    <p>Bookers では、さまざまな書籍に関するあなたの意見や<br>
+3:    印象を共有し交換することができます</p>
+4:    
+5:    <%= link_to "start" , root_path class="start"%>
+  
+app/views/homes/top.html.erb:5: syntax error, unexpected `class', expecting `do' or '{' or '('
+app/views/homes/top.html.erb:5: syntax error, unexpected `class', expecting `do' or '{' or '('
+app/views/homes/top.html.erb:5: syntax error, unexpected `class', expecting `do' or '{' or '('
+app/views/homes/top.html.erb:5: syntax error, unexpected `class', expecting `do' or '{' or '('
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:13:31 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1098)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1180)
+Completed 500 Internal Server Error in 8ms (Allocations: 2277)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>ようこそ Bookers へ！</h2>
+<p>Bookers では、さまざまな書籍に関するあなたの意見や<br>
+印象を共有し交換することができます</p>
+
+<%= link_to "start" , root_path ,class "start"%>
+):
+1:    <h2>ようこそ Bookers へ！</h2>
+2:    <p>Bookers では、さまざまな書籍に関するあなたの意見や<br>
+3:    印象を共有し交換することができます</p>
+4:    
+5:    <%= link_to "start" , root_path ,class "start"%>
+  
+app/views/homes/top.html.erb:5: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/homes/top.html.erb:5: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/homes/top.html.erb:5: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/homes/top.html.erb:5: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:14:00 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.1ms | Allocations: 194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 14781)
+Completed 200 OK in 44ms (Views: 40.7ms | Allocations: 15897)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:14:01 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 4919)
+Completed 200 OK in 17ms (Views: 15.5ms | Allocations: 5268)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:14:02 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4914)
+Completed 200 OK in 11ms (Views: 10.4ms | Allocations: 5261)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:14:03 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 4914)
+Completed 200 OK in 14ms (Views: 13.2ms | Allocations: 5261)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:14:03 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4914)
+Completed 200 OK in 10ms (Views: 9.3ms | Allocations: 5261)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:14:03 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4915)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 5263)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:14:03 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 4914)
+Completed 200 OK in 11ms (Views: 10.5ms | Allocations: 5261)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:14:04 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.0ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4919)
+Completed 200 OK in 17ms (Views: 16.0ms | Allocations: 5267)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:14:40 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.6ms | Allocations: 201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 5338)
+Completed 200 OK in 21ms (Views: 18.7ms | Allocations: 6454)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 07:14:41 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/books/index.html.erb:2
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:2
+  Rendered books/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1732)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 6734)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 1.1ms | Allocations: 7651)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 07:14:56 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:2
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 749)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 15306)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.1ms | Allocations: 15673)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 07:14:56 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:2
+  Rendered books/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 722)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 5561)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 5916)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:14:57 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.1ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 5051)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 5405)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:15:03 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4971)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 5318)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 07:15:04 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:2
+  Rendered books/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 740)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5672)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 6030)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 07:15:05 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:2
+  Rendered books/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 727)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 5566)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.2ms | Allocations: 5926)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:15:08 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 5027)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 5378)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 07:16:04 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 14511)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.0ms | Allocations: 14857)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 13:33:11 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/books/index.html.erb:2
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:2
+  Rendered books/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1590)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 6445)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 1.2ms | Allocations: 6805)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-11-20 13:33:17 +0900
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 661)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 5504)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 6078)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 13:33:18 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:2
+  Rendered books/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 734)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 5725)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 6559)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 13:33:20 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 5027)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 5394)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 13:33:21 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4917)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 5265)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 13:33:22 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.5ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 4916)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 5263)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-20 13:33:23 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.1ms | Allocations: 87)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4925)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 5273)
+
+

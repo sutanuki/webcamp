@@ -18,10 +18,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+.content{
+    margin: 10px 20px;
+}
 a{
     text-decoration: none;
     color: black;
-    margin: 0 auto;
 }
 header{
     display: flex;
@@ -34,7 +36,7 @@ h1{
     margin: 10px 20px ;
     font-size: 32px;
 }
-ul{
+.main_nav{
     display: flex;
     gap: 20px;
     font-size: 20px;
@@ -43,7 +45,7 @@ ul{
     list-style: none;
     margin-right: 20px;
 }
-li{
+.nav_items{
     text-align: center;
     align-items: center;
 }

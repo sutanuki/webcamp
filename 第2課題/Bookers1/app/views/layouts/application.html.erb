@@ -12,14 +12,16 @@
 
   <body>
     <header>
-      <h1><a href="">Bookers</a></h1>
-      <ul>
-        <li><a href="">新規投稿</a></li>
-        <li><a href="">投稿一覧</a></li>
-        <li><a href="">編集</a></li>
-        <li><a href="">削除</a></li>
+      <h1><%= link_to "Bookers" , root_path %></h1>
+      <ul class="main_nav">
+        <li class="nav_items"><%= link_to "新規投稿" , new_book_path %></li>
+        <li class="nav_items"><%= link_to "投稿一覧" , books_path %></li>
+        <li class="nav_items"><%= link_to "投稿編集" , edit_book_path%></li>
+        <li class="nav_items"><%= link_to "投稿削除" , book_path %></li>
       </ul>
     </header>
-    <%= yield %>
+    <div class="content">
+      <%= yield %>
+    </div>
   </body>
 </html>
