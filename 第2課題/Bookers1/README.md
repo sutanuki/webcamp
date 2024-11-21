@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+    <header>
+      <h1><%= link_to "Bookers" , root_path %></h1>
+      <ul class="main_nav">
+        <li class="nav_items"><%= link_to "新規投稿" , new_book_path %></li>
+        <li class="nav_items"><%= link_to "投稿一覧" , books_path %></li>
+      </ul>
+    </header>

@@ -11,7 +11,7 @@ class BooksController < ApplicationController
     else
       @books = Book.all
       flash[:notice] = 'unsuccessfully created.'
-      render :new
+      render :index
     end
   end
 

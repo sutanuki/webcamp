@@ -22,10 +22,10 @@
 </div>
 <h1>新規投稿</h1>
 <% if @book.errors.any? %>
-<%= @book.errors.count %>件のエラーが発生しました
+<%= @book.errors.count %>件のerrorが発生しました
 <ul>
   <% @book.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
+    <li><%= message %></li>error
   <% end %>
 </ul>
 <% end %>
@@ -37,6 +37,6 @@
     <h4>本文</h4>
     <%= f.text_area :body %>
     
-    <%= f.submit '投稿' %>
+    <%= f.submit 'Create Book' %>
 
 <% end %>
