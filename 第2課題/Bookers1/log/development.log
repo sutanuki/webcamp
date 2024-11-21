@@ -1977,3 +1977,1556 @@ ActionController::ParameterMissing (param is missing or the value is empty: book
   
 app/controllers/books_controller.rb:51:in `book_params'
 app/controllers/books_controller.rb:25:in `index'
+Started GET "/books" for 127.0.0.1 at 2024-11-20 19:49:20 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+Completed 400 Bad Request in 8ms (ActiveRecord: 0.0ms | Allocations: 2204)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: book):
+  
+app/controllers/books_controller.rb:51:in `book_params'
+app/controllers/books_controller.rb:25:in `index'
+Started GET "/books" for 127.0.0.1 at 2024-11-20 19:49:20 +0900
+Processing by BooksController#index as HTML
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 560)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: book):
+  
+app/controllers/books_controller.rb:51:in `book_params'
+app/controllers/books_controller.rb:25:in `index'
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:00:20 +0900
+Processing by BooksController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/books_controller.rb:24:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2480)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 19330)
+Completed 200 OK in 54ms (Views: 46.2ms | ActiveRecord: 0.8ms | Allocations: 24778)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-11-20 20:00:28 +0900
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"test1", "body"=>"タタタタ田"}, "commit"=>"投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mBook Create (2.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test1"], ["body", "タタタタ田"], ["created_at", "2024-11-20 11:00:28.649030"], ["updated_at", "2024-11-20 11:00:28.649030"]]
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 13ms (ActiveRecord: 3.8ms | Allocations: 3298)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:00:28 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1483)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 6265)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.2ms | Allocations: 6640)
+
+
+Started DELETE "/books/6" for 127.0.0.1 at 2024-11-20 20:00:32 +0900
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"6"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:17:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:18:in `destroy'
+  [1m[36mBook Destroy (1.2ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/books_controller.rb:18:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:18:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 15ms (ActiveRecord: 2.6ms | Allocations: 3404)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:00:32 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1344)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 6137)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 6512)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-11-20 20:00:37 +0900
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"あああ", "body"=>"あああ"}, "commit"=>"投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mBook Create (1.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "あああ"], ["body", "あああ"], ["created_at", "2024-11-20 11:00:37.674952"], ["updated_at", "2024-11-20 11:00:37.674952"]]
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 11ms (ActiveRecord: 2.2ms | Allocations: 2513)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:00:37 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1483)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 6275)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.2ms | Allocations: 6648)
+
+
+Started GET "/books/7/edit" for 127.0.0.1 at 2024-11-20 20:00:44 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 820)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5611)
+Completed 200 OK in 16ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 6713)
+
+
+Started PATCH "/books/7" for 127.0.0.1 at 2024-11-20 20:00:48 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"ああい", "body"=>"あああ"}, "commit"=>"保存", "id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:36:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:37:in `update'
+  [1m[36mBook Update (0.7ms)[0m  [1m[33mUPDATE "books" SET "title" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["title", "ああい"], ["updated_at", "2024-11-20 11:00:48.045258"], ["id", 7]]
+  ↳ app/controllers/books_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:37:in `update'
+Redirected to http://127.0.0.1:8080/books/7
+Completed 302 Found in 12ms (ActiveRecord: 1.7ms | Allocations: 3370)
+
+
+Started GET "/books/7" for 127.0.0.1 at 2024-11-20 20:00:48 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 289)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 5081)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 6146)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:00:50 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1493)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 6397)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.2ms | Allocations: 6774)
+
+
+Started DELETE "/books/7" for 127.0.0.1 at 2024-11-20 20:00:54 +0900
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"7"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:17:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:18:in `destroy'
+  [1m[36mBook Destroy (0.7ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/books_controller.rb:18:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:18:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 12ms (ActiveRecord: 2.1ms | Allocations: 2750)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:00:54 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1344)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 6544)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.1ms | Allocations: 7223)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-11-20 20:00:59 +0900
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>"あああ"}, "commit"=>"投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mBook Create (1.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", ""], ["body", "あああ"], ["created_at", "2024-11-20 11:00:59.293023"], ["updated_at", "2024-11-20 11:00:59.293023"]]
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 11ms (ActiveRecord: 2.2ms | Allocations: 2514)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:00:59 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2006)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 7507)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 8138)
+
+
+Started DELETE "/books/8" for 127.0.0.1 at 2024-11-20 20:01:02 +0900
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"8"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:17:in `destroy'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:18:in `destroy'
+  [1m[36mBook Destroy (0.8ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/books_controller.rb:18:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:18:in `destroy'
+Redirected to http://127.0.0.1:8080/books
+Completed 302 Found in 12ms (ActiveRecord: 4.2ms | Allocations: 2750)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:01:02 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1344)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 6136)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 6510)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-11-20 20:02:58 +0900
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>"あああ"}, "commit"=>"投稿"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/books_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 4319)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 11860)
+Completed 200 OK in 25ms (Views: 17.2ms | ActiveRecord: 0.5ms | Allocations: 16686)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-11-20 20:03:02 +0900
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"あ", "body"=>""}, "commit"=>"投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1965)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 6675)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.2ms | Allocations: 7612)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-11-20 20:03:05 +0900
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2501)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 7198)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.2ms | Allocations: 8141)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:03:41 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 146)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 5030)
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 0.4ms | Allocations: 6131)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:05:26 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 5377)
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 0.3ms | Allocations: 7080)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:05:27 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 4909)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 5843)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:05:29 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4909)
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 0.3ms | Allocations: 5841)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:05:29 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 4924)
+Completed 200 OK in 19ms (Views: 13.9ms | ActiveRecord: 0.3ms | Allocations: 5858)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:05:29 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4909)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 5842)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:05:30 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 4909)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 5841)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:05:30 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4926)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 5860)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:05:30 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4909)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 5842)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:05:31 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4909)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 5841)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:05:51 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 5350)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 7053)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:05:52 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1842)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 6628)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 7169)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:08:21 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 5349)
+Completed 200 OK in 22ms (Views: 16.4ms | ActiveRecord: 0.3ms | Allocations: 7133)
+
+
+Started GET "/books/3/edit" for 127.0.0.1 at 2024-11-20 20:08:23 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1747)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1839)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 2913)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for an instance of #<Class:0x00000001234b0478>):
+    10:   <%= f.submit '保存' %>
+    11:   
+    12: <% end %>
+    13: <%=link_to "Show", book_path(book.id) %>
+    14: <%= link_to "Back", books_path %>
+  
+app/views/books/edit.html.erb:13
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:08:33 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5009)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 5950)
+
+
+Started GET "/books/3/edit" for 127.0.0.1 at 2024-11-20 20:08:34 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1413)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1519)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 2445)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for an instance of #<Class:0x00000001234b0478>):
+    10:   <%= f.submit '保存' %>
+    11:   
+    12: <% end %>
+    13: <%=link_to "Show", book_path(book.id) %>
+    14: <%= link_to "Back", books_path %>
+  
+app/views/books/edit.html.erb:13
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:08:44 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 5011)
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 0.3ms | Allocations: 5952)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:08:45 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1827)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 6619)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.1ms | Allocations: 7137)
+
+
+Started GET "/books/4" for 127.0.0.1 at 2024-11-20 20:08:47 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4982)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.2ms | Allocations: 5928)
+
+
+Started GET "/books/4/edit" for 127.0.0.1 at 2024-11-20 20:08:50 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1521)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 2444)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for an instance of #<Class:0x00000001234b0478>):
+    10:   <%= f.submit '保存' %>
+    11:   
+    12: <% end %>
+    13: <%=link_to "Show", book_path(book.id) %>
+    14: <%= link_to "Back", books_path %>
+  
+app/views/books/edit.html.erb:13
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:08:52 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1349)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 6247)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.1ms | Allocations: 6623)
+
+
+Started GET "/books/3/edit" for 127.0.0.1 at 2024-11-20 20:08:54 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1413)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1504)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 2509)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for an instance of #<Class:0x00000001234b0478>):
+    10:   <%= f.submit '保存' %>
+    11:   
+    12: <% end %>
+    13: <%=link_to "Show", book_path(book.id) %>
+    14: <%= link_to "Back", books_path %>
+  
+app/views/books/edit.html.erb:13
+Started GET "/books/3/edit" for 127.0.0.1 at 2024-11-20 20:09:13 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.9ms | Allocations: 819)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 5885)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 7588)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:09:14 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 340)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 5120)
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 6207)
+
+
+Started GET "/books/3/edit" for 127.0.0.1 at 2024-11-20 20:09:16 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 555)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5443)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.2ms | Allocations: 6428)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:09:16 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 5017)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 5983)
+
+
+Started GET "/books/3/edit" for 127.0.0.1 at 2024-11-20 20:09:17 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:32:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 555)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 5433)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 6375)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:09:17 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1737)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 6621)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.3ms | Allocations: 7152)
+
+
+Started GET "/books/3" for 127.0.0.1 at 2024-11-20 20:09:19 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4988)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 5950)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:09:20 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1375)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 6264)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 6658)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-11-20 20:24:50 +0900
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"aaa", "body"=>"aaa"}, "commit"=>"投稿"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/books_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "aaa"], ["body", "aaa"], ["created_at", "2024-11-20 11:24:51.014414"], ["updated_at", "2024-11-20 11:24:51.014414"]]
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.1ms | Allocations: 6157)
+
+
+  
+NameError (undefined local variable or method `book' for an instance of BooksController):
+  
+app/controllers/books_controller.rb:10:in `create'
+Started POST "/books" for 127.0.0.1 at 2024-11-20 20:25:07 +0900
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"aaa", "body"=>"aaa"}, "commit"=>"投稿"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/books_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "aaa"], ["body", "aaa"], ["created_at", "2024-11-20 11:25:07.539832"], ["updated_at", "2024-11-20 11:25:07.539832"]]
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:8080/books/10
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms | Allocations: 6233)
+
+
+Started GET "/books/10" for 127.0.0.1 at 2024-11-20 20:25:07 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4999)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 6320)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:25:10 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1775)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 6648)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.3ms | Allocations: 7032)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-11-20 20:25:15 +0900
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"aaa", "body"=>"aaa"}, "commit"=>"投稿"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mBook Create (1.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "aaa"], ["body", "aaa"], ["created_at", "2024-11-20 11:25:15.517954"], ["updated_at", "2024-11-20 11:25:15.517954"]]
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:8080/books/11
+Completed 302 Found in 15ms (ActiveRecord: 2.7ms | Allocations: 2544)
+
+
+Started GET "/books/11" for 127.0.0.1 at 2024-11-20 20:25:15 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4892)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 5824)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:26:56 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 7333)
+Completed 200 OK in 31ms (Views: 26.0ms | ActiveRecord: 0.3ms | Allocations: 8582)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-11-20 20:27:01 +0900
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>"gdg"}, "commit"=>"投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mBook Create (0.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "fdt"], ["body", "gdg"], ["created_at", "2024-11-20 11:27:01.276327"], ["updated_at", "2024-11-20 11:27:01.276327"]]
+  ↳ app/controllers/books_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:8080/books/12
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms | Allocations: 2539)
+
+
+Started GET "/books/12" for 127.0.0.1 at 2024-11-20 20:27:01 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 5040)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 6103)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-20 20:27:06 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1927)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 6830)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.3ms | Allocations: 7210)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-11-20 20:27:08 +0900
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"aaa", "body"=>""}, "commit"=>"投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2495)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 7206)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.3ms | Allocations: 8159)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-11-21 11:19:22 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1401)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 10268)
+Completed 200 OK in 29ms (Views: 17.1ms | ActiveRecord: 0.2ms | Allocations: 16755)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-21 11:19:24 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 32.2ms | Allocations: 2552)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 7370)
+Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 0.2ms | Allocations: 7948)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-21 11:19:43 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1906)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 6703)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.3ms | Allocations: 7081)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-21 11:19:45 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.2ms | Allocations: 219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 5189)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 6695)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-11-21 11:19:47 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1910)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 6800)
+Completed 200 OK in 29ms (Views: 23.2ms | ActiveRecord: 0.1ms | Allocations: 7182)
+
+
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 11:19:52 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:33:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 5593)
+Completed 200 OK in 28ms (Views: 9.1ms | ActiveRecord: 0.5ms | Allocations: 9124)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 11:19:57 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>"gd"}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:37:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  [1m[36mBook Update (1.2ms)[0m  [1m[33mUPDATE "books" SET "body" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["body", "gd"], ["updated_at", "2024-11-21 02:19:57.368376"], ["id", 12]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:38:in `update'
+Redirected to http://127.0.0.1:8080/books/12
+Completed 302 Found in 15ms (ActiveRecord: 2.8ms | Allocations: 4021)
+
+
+Started GET "/books/12" for 127.0.0.1 at 2024-11-21 11:19:57 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 5043)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 6102)
+
+
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 11:31:12 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 5543)
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 0.5ms | Allocations: 10050)
+
+
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 11:31:14 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 555)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 5358)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 0.2ms | Allocations: 6286)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 11:31:16 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>"gd"}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+Redirected to http://127.0.0.1:8080/books/12
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1191)
+
+
+Started GET "/books/12" for 127.0.0.1 at 2024-11-21 11:31:16 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 115)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4921)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 5854)
+
+
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 11:31:18 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 555)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5453)
+Completed 200 OK in 17ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 6419)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 11:31:21 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>""}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1129)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1209)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms | Allocations: 3520)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil):
+    1: <h1>新規投稿</h1>
+    2: <% if @book.errors.any? %>
+    3: <%= @book.errors.count %>件のエラーが発生しました
+    4: <ul>
+    5:   <% @book.errors.full_messages.each do |message| %>
+  
+app/views/books/new.html.erb:2
+app/controllers/books_controller.rb:46:in `update'
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 11:33:26 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 910)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 6054)
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 0.3ms | Allocations: 7752)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 11:33:27 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>""}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1155)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1235)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms | Allocations: 3592)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil):
+    1: <h1>新規投稿</h1>
+    2: <% if @book.errors.any? %>
+    3: <%= @book.errors.count %>件のエラーが発生しました
+    4: <ul>
+    5:   <% @book.errors.full_messages.each do |message| %>
+  
+app/views/books/new.html.erb:2
+app/controllers/books_controller.rb:46:in `update'
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 11:45:22 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>""}, "commit"=>"保存", "id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1153)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1234)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms | Allocations: 4896)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil):
+    1: <h1>新規投稿</h1>
+    2: <% if @book.errors.any? %>
+    3: <%= @book.errors.count %>件のエラーが発生しました
+    4: <ul>
+    5:   <% @book.errors.full_messages.each do |message| %>
+  
+app/views/books/new.html.erb:2
+app/controllers/books_controller.rb:46:in `update'
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 11:45:27 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1269)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1349)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 2389)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for an instance of #<Class:0x000000012f6feed0>):
+    1: <h1>編集画面</h1>
+    2: <% if book.errors.any? %>
+    3: <%= book.errors.count %>件のエラーが発生しました
+    4: <ul>
+    5:   <% book.errors.full_messages.each do |message| %>
+  
+app/views/books/edit.html.erb:2
+Started GET "/books/" for 127.0.0.1 at 2024-11-21 11:46:03 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2371)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 7515)
+Completed 200 OK in 28ms (Views: 24.1ms | ActiveRecord: 0.3ms | Allocations: 8665)
+
+
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 11:46:11 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 5564)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 0.1ms | Allocations: 6624)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 11:46:13 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>"gd"}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+Redirected to http://127.0.0.1:8080/books/12
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1051)
+
+
+Started GET "/books/12" for 127.0.0.1 at 2024-11-21 11:46:13 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5048)
+Completed 200 OK in 17ms (Views: 12.7ms | ActiveRecord: 0.3ms | Allocations: 6112)
+
+
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 11:46:15 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 555)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 5452)
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 0.3ms | Allocations: 6409)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 11:46:17 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>""}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1151)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1231)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 3603)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil):
+    1: <h1>新規投稿</h1>
+    2: <% if @book.errors.any? %>
+    3: <%= @book.errors.count %>件のエラーが発生しました
+    4: <ul>
+    5:   <% @book.errors.full_messages.each do |message| %>
+  
+app/views/books/new.html.erb:2
+app/controllers/books_controller.rb:46:in `update'
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 11:53:57 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 5542)
+Completed 200 OK in 19ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 10007)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 11:53:59 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>""}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1752)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 6418)
+Completed 200 OK in 19ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 8749)
+
+
+Started POST "/books/12" for 127.0.0.1 at 2024-11-21 11:54:04 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/books/12"):
+  
+Started GET "/books/12" for 127.0.0.1 at 2024-11-21 11:54:07 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4921)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.3ms | Allocations: 5852)
+
+
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 11:54:14 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 555)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 5454)
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 0.2ms | Allocations: 6411)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 11:54:15 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>"gd"}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+Redirected to http://127.0.0.1:8080/books/12
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 1107)
+
+
+Started GET "/books/12" for 127.0.0.1 at 2024-11-21 11:54:15 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4901)
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 5832)
+
+
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 11:54:16 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 555)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 5478)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 6420)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 11:54:19 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>"gd"}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1310)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5977)
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 8229)
+
+
+Started POST "/books/12" for 127.0.0.1 at 2024-11-21 11:54:28 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/books/12"):
+  
+Started GET "/books/12" for 127.0.0.1 at 2024-11-21 11:54:30 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4915)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 5847)
+
+
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 11:54:31 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 555)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 5448)
+Completed 200 OK in 16ms (Views: 11.3ms | ActiveRecord: 0.2ms | Allocations: 6386)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 11:54:35 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>""}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1310)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 5976)
+Completed 200 OK in 25ms (Views: 20.0ms | ActiveRecord: 0.2ms | Allocations: 8229)
+
+
+Started GET "/books/12" for 127.0.0.1 at 2024-11-21 11:54:36 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4905)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 0.3ms | Allocations: 5838)
+
+
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 12:01:55 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 914)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 6041)
+Completed 200 OK in 27ms (Views: 18.7ms | ActiveRecord: 0.8ms | Allocations: 8518)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 12:02:02 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>""}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 891)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 971)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 3218)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil):
+    1: <% if @book.errors.any? %>
+    2: <%= @book.errors.count %>件のエラーが発生しました
+    3: <ul>
+    4:   <% @book.errors.full_messages.each do |message| %>
+  
+app/views/books/edit.html.erb:1
+app/controllers/books_controller.rb:46:in `update'
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 12:03:02 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1347)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 3023)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for an instance of #<Class:0x0000000168333038>):
+    1: <% if book.errors.any? %>
+    2: <%= book.errors.count %>件のエラーが発生しました
+    3: <ul>
+    4:   <% book.errors.full_messages.each do |message| %>
+  
+app/views/books/edit.html.erb:1
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 12:04:01 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 909)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 6051)
+Completed 200 OK in 25ms (Views: 20.2ms | ActiveRecord: 0.2ms | Allocations: 7749)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 12:04:06 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>""}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.6ms | Allocations: 890)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 970)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 3194)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil):
+    1: <% if @book.errors.any? %>
+    2: <%= @book.errors.count %>件のエラーが発生しました
+    3: <ul>
+    4:   <% @book.errors.full_messages.each do |message| %>
+  
+app/views/books/edit.html.erb:1
+app/controllers/books_controller.rb:46:in `update'
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 12:07:30 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 713)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 5544)
+Completed 200 OK in 17ms (Views: 10.6ms | ActiveRecord: 0.5ms | Allocations: 10366)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 12:07:31 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>""}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 6755)
+Completed 200 OK in 25ms (Views: 17.8ms | ActiveRecord: 0.3ms | Allocations: 9077)
+
+
+Started PATCH "/books/12" for 127.0.0.1 at 2024-11-21 12:07:38 +0900
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"fdt", "body"=>"aa"}, "commit"=>"保存", "id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:38:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:39:in `update'
+  [1m[36mBook Update (1.0ms)[0m  [1m[33mUPDATE "books" SET "body" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["body", "aa"], ["updated_at", "2024-11-21 03:07:38.319539"], ["id", 12]]
+  ↳ app/controllers/books_controller.rb:39:in `update'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:39:in `update'
+Redirected to http://127.0.0.1:8080/books/12
+Completed 302 Found in 13ms (ActiveRecord: 2.2ms | Allocations: 3323)
+
+
+Started GET "/books/12" for 127.0.0.1 at 2024-11-21 12:07:38 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 259)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 5049)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 6112)
+
+
+Started GET "/books/12" for 127.0.0.1 at 2024-11-21 12:07:40 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4899)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 5826)
+
+
+Started GET "/books/12/edit" for 127.0.0.1 at 2024-11-21 12:07:41 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:34:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 556)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5359)
+Completed 200 OK in 27ms (Views: 11.8ms | ActiveRecord: 0.3ms | Allocations: 6287)
+
+
+Started GET "/books/12" for 127.0.0.1 at 2024-11-21 12:07:41 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4990)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 5935)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-21 12:07:42 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.4ms | Allocations: 221)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 5170)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 6655)
+
+
